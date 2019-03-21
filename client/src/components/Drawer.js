@@ -95,7 +95,7 @@ class SwipeableTemporaryDrawer extends React.Component {
           aspects: res.data._embedded.aspects
         }, () => {
           this.state.aspects.map(aspect => {
-            if (aspect.name !== 'status') {
+            if (aspect.name === 'SION_DATA_ASPECT_V2_2') {
               this.props.aspects(aspect.name, aspect.holderAssetId, assetName)
             }
           })
